@@ -36,6 +36,28 @@ url = "用户提供的链接"
 result = WebFetch(url=url, prompt="提取页面中的关键信息：标题、核心概念、技术细节、代码示例")
 ```
 
+### 特殊处理：X/Twitter
+X (Twitter) 需要 JavaScript 渲染，无法直接抓取。使用 jina.ai 作为代理：
+
+**方法**: 将 URL 前缀改为 `https://r.jina.ai/`
+
+```python
+# X/Twitter 链接处理
+if "x.com" in url or "twitter.com" in url:
+    # 原始链接: https://x.com/username/status/123456789
+    # 转换后:   https://r.jina.ai/https://x.com/username/status/123456789
+    fetch_url = "https://r.jina.ai/" + url
+    result = WebFetch(url=fetch_url, prompt="提取推文内容、作者、关键观点、技术细节")
+
+# 记录获取方式
+metadata["fetch_method"] = "jina.ai"
+```
+
+**支持的 jina.ai 格式**:
+- `https://r.jina.ai/https://x.com/...` - Twitter/X
+- `https://r.jina.ai/http://...` - 普通网页
+- `https://r.jina.ai/https://github.com/...` - GitHub
+
 ### Step 3: 分析和提取
 从获取的内容中提取：
 - 标题（从页面或URL推断）
