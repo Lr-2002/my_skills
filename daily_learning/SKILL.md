@@ -1,10 +1,10 @@
 ---
 name: daily_learning
-description: Daily random learning assistant. Randomly picks topics from robot/coding/history/math, teaches with progressive depth, and quizzes on learned material using local cache.
+description: Daily random learning assistant. Randomly picks topics from robot/coding/engineering/business/history/math, teaches with progressive depth, and quizzes on learned material using local cache.
 ---
 
 <objective>
-提供每日随机学习主题，包括机器人、编程、历史、数学。采用渐进式教学深度，记录学习进度，对已学内容进行测验。
+提供每日随机学习主题，包括机器人、编程、工程、商业、历史、数学。采用渐进式教学深度，记录学习进度，对已学内容进行测验。
 </objective>
 
 <cache_location>
@@ -16,6 +16,8 @@ description: Daily random learning assistant. Randomly picks topics from robot/c
 |------|---------|
 | robot | 逆运动学、DH参数、PID控制、ROS、传感器融合、力控抓取 |
 | coding | 设计模式、算法复杂度、内存管理、并发模型、函数式编程 |
+| engineering | 机构设计、电机选型、热管理、供应链、量产验证、成本分析 |
+| business | 商业模式、融资策略、市场分析、竞争分析、定价策略、团队管理 |
 | history | 工业革命、计算机史、图灵冯诺依曼、阿波罗计划、互联网诞生 |
 | math | 矩阵变换、李群李代数、卡尔曼滤波、最优化、概率论基础 |
 </topic_categories>
