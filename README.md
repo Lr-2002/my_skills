@@ -27,6 +27,21 @@ Update skills from this GitHub repository.
 - `"更新"` / `"update"` - Pull latest changes
 - `"状态"` / `"status"` - Show sync status
 
+### save_thread
+Fetch URL content and save to Obsidian knowledge vault.
+
+**Usage:**
+1. Provide a link: `save_thread https://github.com/xxx/repo`
+2. Skill fetches and extracts content
+3. Saves to appropriate folder in Obsidian
+
+**Supports:**
+- GitHub repositories and files
+- Technical documentation
+- Academic papers (arXiv)
+- Blog posts and articles
+- Any web-accessible content
+
 ## Installation
 
 ### Quick Install
@@ -102,6 +117,8 @@ my_skills/
 ├── daily_learning/
 │   └── SKILL.md
 ├── save_knowledge/
+│   └── SKILL.md
+├── save_thread/
 │   └── SKILL.md
 └── update_my_skill/
     └── SKILL.md
